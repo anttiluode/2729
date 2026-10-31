@@ -1,0 +1,13 @@
+G4 src 0 phase 1.57 amp 1.0: [0, 0, 1, 0] -> [0, 0, 0, 0] -> [0, 0, 0, 0] -> [1, 0, 0, 0]   (fresh wall, late: [0, 0, 1, 0])
+G4 src 0 phase 2.36 amp 1.0: [0, 0, 1, 0] -> [1, 0, 0, 0] -> [1, 0, 0, 0] -> [0, 0, 0, 0]   (fresh wall, late: [0, 0, 1, 0])
+G4 src 0 phase 0.39 amp 2.0: [0, 0, 1, 0] -> [0, 0, 1, 0] -> [0, 0, 0, 0] -> [0, 0, 0, 0]   (fresh wall, late: [0, 0, 1, 0])
+G4 src 0 phase 2.75 amp 2.0: [1, 0, 1, 0] -> [1, 0, 1, 0] -> [1, 0, 0, 0] -> [1, 0, 0, 0]   (fresh wall, late: [1, 0, 1, 0])
+G4 src 0 phase 3.93 amp 2.0: [1, 0, 0, 0] -> [1, 0, 1, 0] -> [1, 0, 0, 0] -> [1, 0, 0, 0]   (fresh wall, late: [1, 0, 0, 0])
+G4 src 1 phase 0.00 amp 2.0: [1, 0, 1, 0] -> [1, 0, 1, 0] -> [1, 0, 1, 0] -> [1, 0, 1, 0]   (fresh wall, late: [1, 0, 1, 0])
+G4 src 1 phase 0.79 amp 2.0: [1, 0, 1, 0] -> [1, 0, 1, 0] -> [1, 0, 1, 0] -> [1, 0, 1, 0]   (fresh wall, late: [1, 0, 1, 0])
+G4 src 1 phase 1.96 amp 2.0: [0, 1, 0, 0] -> [0, 0, 0, 1] -> [0, 0, 0, 1] -> [0, 0, 0, 0]   (fresh wall, late: [0, 1, 0, 0])
+G4 src 1 phase 2.75 amp 2.0: [0, 1, 0, 0] -> [0, 1, 0, 0] -> [0, 0, 0, 0] -> [0, 0, 0, 0]   (fresh wall, late: [0, 1, 0, 0])
+G4 src 1 phase 5.11 amp 2.0: [1, 1, 0, 1] -> [1, 0, 1, 0] -> [0, 0, 0, 0] -> [0, 0, 0, 0]   (fresh wall, late: [1, 0, 0, 1])
+G4 src 2 phase 0.00 amp 2.0: [1, 0, 0, 1] -> [0, 0, 0, 1] -> [0, 0, 0, 0] -> [0, 0, 1, 0]   (fresh wall, late: [1, 0, 0, 1])
+G4 src 2 phase 3.53 amp 2.0: [1, 0, 1, 0] -> [1, 0, 1, 0] -> [1, 0, 0, 0] -> [1, 0, 0, 0]   (fresh wall, late: [1, 0, 1, 0])
+G4: control fresh-late == first in 11/12; on the SAME wall the 2nd application == 1st in 6/12; 2nd fires nothing in 1/12

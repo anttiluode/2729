@@ -1,0 +1,7 @@
+G2 write: 144 actions, 10 distinct fired sets: [(0, 0, 0, 0), (0, 0, 1, 0), (0, 1, 0, 0), (0, 1, 1, 0), (1, 0, 0, 0), (1, 0, 0, 1), (1, 0, 1, 0), (1, 0, 1, 1), (1, 1, 0, 1), (1, 1, 1, 0)]
+   patch 0: fired ALONE by 12 actions
+   patch 1: fired ALONE by 5 actions
+   patch 2: fired ALONE by 23 actions
+   patch 3: fired ALONE by 0 actions
+   firing steps after carrier start (min/median/90%/max): [240.0, 765.0, 1441.0000000000005, 2690.0]; cavity rms at end max 5.12e-02
+   one-slip D: {'n': 110, 'median': -0.8658757209777832, 'min': -1.9110288619995117, 'max': -0.28206968307495117}; non-firing |dD| max 0.949; multi-slip events 1

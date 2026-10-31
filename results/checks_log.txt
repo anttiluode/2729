@@ -1,0 +1,13 @@
+ringdown {'source': 2, 'phase': 5.497787143782138, 'amp': 2.0}: at carrier end [0, 0, 0, 0]; as is [1, 0, 1, 1], silenced [0, 0, 0, 0], mean removed [1, 0, 0, 1]
+ringdown {'source': 0, 'phase': 3.141592653589793, 'amp': 1.0}: at carrier end [0, 0, 0, 0]; as is [1, 0, 0, 0], silenced [0, 0, 0, 0], mean removed [1, 0, 0, 0]
+ringdown {'source': 0, 'phase': 1.1780972450961724, 'amp': 1.0}: at carrier end [0, 0, 0, 0]; as is [0, 0, 1, 0], silenced [0, 0, 0, 0], mean removed [0, 0, 0, 0]
+ringdown {'source': 2, 'phase': 1.5707963267948966, 'amp': 2.0}: at carrier end [0, 0, 0, 0]; as is [0, 1, 1, 0], silenced [0, 0, 0, 0], mean removed [1, 0, 1, 0]
+readwrit: 4 written walls x 3 read cycles: max |D_read - D_quiet| 0.0459 rad; max |D_quiet - D_silenced| 0.0001; slips read [[1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0], [1, 0, 0, 0]] quiet [[1, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0], [1, 0, 0, 0]]
+wobble patch 0: mean -2.365 range 1.784 period 195  halves -2.363 / -2.368
+wobble patch 1: mean -0.837 range 0.823 period 195  halves -0.836 / -0.838
+wobble patch 2: mean +0.356 range 0.362 period 195  halves +0.356 / +0.356
+wobble patch 3: mean -2.353 range 1.780 period 195  halves -2.350 / -2.355
+clock carrier ref=pump: fresh wall now vs fresh wall later (clocks matched) agree 2/16
+clock carrier ref=pair: fresh wall now vs fresh wall later (clocks matched) agree 15/16
+clock carrier ref=start: fresh wall now vs fresh wall later (clocks matched) agree 16/16
+locked theta_A rate 0.01599 rad/step

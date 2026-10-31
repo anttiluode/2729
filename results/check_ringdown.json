@@ -1,0 +1,126 @@
+[
+ {
+  "action": {
+   "source": 2,
+   "phase": 5.497787143782138,
+   "amp": 2.0
+  },
+  "slips_at_carrier_end": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "as_is": [
+   1,
+   0,
+   1,
+   1
+  ],
+  "silenced": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "mean_removed": [
+   1,
+   0,
+   0,
+   1
+  ]
+ },
+ {
+  "action": {
+   "source": 0,
+   "phase": 3.141592653589793,
+   "amp": 1.0
+  },
+  "slips_at_carrier_end": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "as_is": [
+   1,
+   0,
+   0,
+   0
+  ],
+  "silenced": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "mean_removed": [
+   1,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "action": {
+   "source": 0,
+   "phase": 1.1780972450961724,
+   "amp": 1.0
+  },
+  "slips_at_carrier_end": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "as_is": [
+   0,
+   0,
+   1,
+   0
+  ],
+  "silenced": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "mean_removed": [
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "action": {
+   "source": 2,
+   "phase": 1.5707963267948966,
+   "amp": 2.0
+  },
+  "slips_at_carrier_end": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "as_is": [
+   0,
+   1,
+   1,
+   0
+  ],
+  "silenced": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "mean_removed": [
+   1,
+   0,
+   1,
+   0
+  ]
+ }
+]

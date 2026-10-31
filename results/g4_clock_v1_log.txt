@@ -1,0 +1,13 @@
+clock src 0 ph 1.57 amp 1.0: first [0, 0, 1, 0]  fresh-late [[0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 0, 0]]  repeated [[0, 0, 0, 0], [1, 0, 1, 0], [0, 0, 0, 0]]
+clock src 0 ph 2.36 amp 1.0: first [0, 0, 1, 0]  fresh-late [[0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 0, 0]]  repeated [[0, 0, 0, 0], [1, 0, 1, 0], [0, 0, 0, 0]]
+clock src 0 ph 0.39 amp 2.0: first [0, 0, 1, 0]  fresh-late [[1, 0, 1, 0], [1, 0, 0, 0], [0, 1, 0, 0]]  repeated [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]]
+clock src 0 ph 2.75 amp 2.0: first [1, 0, 1, 0]  fresh-late [[0, 1, 0, 0], [1, 0, 1, 0], [1, 0, 1, 0]]  repeated [[0, 1, 0, 0], [1, 0, 1, 0], [0, 0, 0, 0]]
+clock src 0 ph 3.93 amp 2.0: first [1, 0, 0, 0]  fresh-late [[1, 0, 0, 0], [0, 0, 1, 0], [1, 0, 0, 0]]  repeated [[0, 0, 1, 0], [1, 0, 0, 0], [1, 0, 1, 0]]
+clock src 1 ph 0.00 amp 2.0: first [1, 0, 1, 0]  fresh-late [[0, 1, 0, 1], [0, 1, 0, 0], [1, 0, 1, 0]]  repeated [[0, 0, 0, 0], [1, 0, 1, 0], [1, 0, 1, 0]]
+clock src 1 ph 0.79 amp 2.0: first [1, 0, 1, 0]  fresh-late [[1, 1, 0, 0], [0, 0, 0, 0], [1, 0, 1, 0]]  repeated [[0, 1, 0, 0], [0, 0, 0, 0], [1, 0, 1, 0]]
+clock src 1 ph 1.96 amp 2.0: first [0, 1, 0, 0]  fresh-late [[1, 0, 1, 0], [1, 0, 0, 1], [1, 0, 1, 0]]  repeated [[1, 0, 1, 0], [0, 0, 0, 1], [0, 0, 0, 0]]
+clock src 1 ph 2.75 amp 2.0: first [0, 1, 0, 0]  fresh-late [[1, 0, 1, 0], [1, 0, 0, 1], [1, 0, 0, 0]]  repeated [[2, 0, 1, 0], [0, 1, 0, 1], [1, 0, 1, 0]]
+clock src 1 ph 5.11 amp 2.0: first [1, 1, 0, 1]  fresh-late [[0, 0, 0, 1], [1, 0, 1, 0], [0, 1, 0, 0]]  repeated [[0, 0, 0, 0], [1, 0, 0, 0], [0, 1, 0, 0]]
+clock src 2 ph 0.00 amp 2.0: first [1, 0, 0, 1]  fresh-late [[0, 0, 0, 0], [2, 0, 1, 0], [1, 1, 0, 1]]  repeated [[1, 0, 1, 0], [0, 1, 1, 0], [0, 0, 0, 0]]
+clock src 2 ph 3.53 amp 2.0: first [1, 0, 1, 0]  fresh-late [[1, 0, 1, 0], [1, 0, 1, 1], [1, 0, 1, 0]]  repeated [[0, 0, 0, 0], [0, 0, 1, 1], [1, 0, 1, 0]]
+G4 clock control: fresh-but-late == first application in 8/36; == the repeated system in 12/36

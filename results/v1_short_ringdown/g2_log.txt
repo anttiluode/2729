@@ -1,0 +1,6 @@
+G2 write: 144 actions, 10 distinct fired sets: [(0, 0, 0, 0), (0, 0, 0, 1), (0, 0, 1, 0), (0, 0, 1, 1), (0, 1, 0, 0), (0, 1, 1, 0), (1, 0, 0, 0), (1, 0, 0, 1), (1, 0, 1, 0), (1, 1, 1, 0)]
+   patch 0: fired ALONE by 12 actions
+   patch 1: fired ALONE by 5 actions
+   patch 2: fired ALONE by 23 actions
+   patch 3: fired ALONE by 1 actions
+   one-slip D: {'n': 104, 'median': -0.8670611381530762, 'min': -3.0253498554229736, 'max': -0.15169930458068848}; non-firing |dD| max 1.132; multi-slip events 0
