@@ -1,0 +1,13 @@
+src 0 ph 1.57 amp 1.0: 1st live [0, 0, 1, 0] neumann [2, 3, 3, 2] | k/K [0.0, 0.01, 0.32, 0.0] | 2nd live [0, 0, 0, 0] neumann [2, 3, 3, 2] frozen [0, 0, 0, 0] | drive diff neumann 10.45 frozen 0.72
+src 0 ph 2.36 amp 1.0: 1st live [0, 0, 1, 0] neumann [2, 2, 3, 2] | k/K [0.05, 0.03, 0.77, 0.01] | 2nd live [1, 0, 0, 0] neumann [3, 2, 3, 2] frozen [1, 0, 0, 0] | drive diff neumann 16.99 frozen 1.01
+src 0 ph 0.39 amp 2.0: 1st live [0, 0, 1, 0] neumann [0, 0, 0, 0] | k/K [0.05, 0.0, 0.23, 0.0] | 2nd live [0, 0, 1, 0] neumann [0, 0, 0, 0] frozen [0, 0, 0, 0] | drive diff neumann 1.19 frozen 0.73
+src 0 ph 2.75 amp 2.0: 1st live [1, 0, 1, 0] neumann [8, 7, 7, 7] | k/K [0.09, 0.02, 0.32, 0.01] | 2nd live [1, 0, 1, 0] neumann [8, 8, 7, 7] frozen [1, 0, 0, 0] | drive diff neumann 11.29 frozen 0.72
+src 0 ph 3.93 amp 2.0: 1st live [1, 0, 0, 0] neumann [2, 0, 0, 0] | k/K [0.37, 0.0, 0.0, 0.0] | 2nd live [1, 0, 1, 0] neumann [2, 0, 0, 1] frozen [1, 0, 0, 0] | drive diff neumann 8.44 frozen 0.61
+src 1 ph 0.00 amp 2.0: 1st live [1, 0, 1, 0] neumann [2, 0, 2, 0] | k/K [0.18, 0.0, 0.05, 0.0] | 2nd live [1, 0, 1, 0] neumann [2, 0, 2, 0] frozen [1, 0, 1, 0] | drive diff neumann 8.52 frozen 0.62
+src 1 ph 0.79 amp 2.0: 1st live [1, 0, 1, 0] neumann [2, 0, 2, 0] | k/K [0.06, 0.03, 0.23, 0.0] | 2nd live [1, 0, 1, 0] neumann [2, 0, 3, 0] frozen [1, 0, 1, 0] | drive diff neumann 9.19 frozen 0.52
+src 1 ph 1.96 amp 2.0: 1st live [0, 1, 0, 0] neumann [11, 11, 10, 11] | k/K [0.02, 0.76, 0.15, 0.05] | 2nd live [0, 0, 0, 1] neumann [11, 11, 11, 11] frozen [0, 0, 0, 1] | drive diff neumann 17.96 frozen 0.89
+src 1 ph 2.75 amp 2.0: 1st live [0, 1, 0, 0] neumann [6, 8, 7, 7] | k/K [0.03, 0.21, 0.15, 0.01] | 2nd live [0, 1, 0, 0] neumann [6, 8, 8, 8] frozen [0, 1, 0, 0] | drive diff neumann 16.30 frozen 1.13
+src 1 ph 5.11 amp 2.0: 1st live [1, 1, 0, 1] neumann [11, 11, 10, 11] | k/K [0.93, 0.1, 0.01, 0.93] | 2nd live [1, 0, 1, 0] neumann [12, 11, 11, 11] frozen [1, 0, 0, 0] | drive diff neumann 24.76 frozen 0.55
+src 2 ph 0.00 amp 2.0: 1st live [1, 0, 0, 1] neumann [2, 0, 1, 0] | k/K [0.86, 0.0, 0.04, 0.22] | 2nd live [0, 0, 0, 1] neumann [1, 0, 1, 1] frozen [0, 0, 0, 0] | drive diff neumann 9.67 frozen 0.63
+src 2 ph 3.53 amp 2.0: 1st live [1, 0, 1, 0] neumann [1, 0, 1, 0] | k/K [0.29, 0.0, 0.22, 0.01] | 2nd live [1, 0, 1, 0] neumann [1, 0, 1, 0] frozen [1, 0, 1, 0] | drive diff neumann 0.95 frozen 0.51
+feedback: 1st application live != neumann in 11/12; 2nd: live != neumann 11/12, live != frozen 5/12; median drive difference {'first_neumann': 7.622261422579774, 'second_neumann': 10.060744651434515, 'second_frozen': 0.6722294433053162}

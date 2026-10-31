@@ -1,0 +1,685 @@
+{
+ "rows": [
+  {
+   "action": {
+    "source": 0,
+    "phase": 1.5707963267948966,
+    "amp": 1.0
+   },
+   "first": {
+    "live": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     2,
+     3,
+     3,
+     2
+    ]
+   },
+   "first_drive_rel_diff_neumann": 8.190718122785633,
+   "kappa_over_KAPPA_before_second": [
+    0.0031556785106658936,
+    0.01375928521156311,
+    0.32114163041114807,
+    0.0032946765422821045
+   ],
+   "second": {
+    "live": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "neumann": [
+     2,
+     3,
+     3,
+     2
+    ],
+    "frozen": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 10.453659848661381,
+   "second_drive_rel_diff_frozen": 0.7206407344916594,
+   "second_drive_rel_diff_neumann_per_patch": [
+    7.99621167400719,
+    11.844420872053963,
+    13.159258328200044,
+    11.15472882684075
+   ]
+  },
+  {
+   "action": {
+    "source": 0,
+    "phase": 2.356194490192345,
+    "amp": 1.0
+   },
+   "first": {
+    "live": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     2,
+     2,
+     3,
+     2
+    ]
+   },
+   "first_drive_rel_diff_neumann": 7.299937388014216,
+   "kappa_over_KAPPA_before_second": [
+    0.051133185625076294,
+    0.029330134391784668,
+    0.773288369178772,
+    0.011361032724380493
+   ],
+   "second": {
+    "live": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "neumann": [
+     3,
+     2,
+     3,
+     2
+    ],
+    "frozen": [
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 16.99087605498424,
+   "second_drive_rel_diff_frozen": 1.0117664977887535,
+   "second_drive_rel_diff_neumann_per_patch": [
+    14.426756564559822,
+    18.009139823727555,
+    17.971525529355695,
+    18.67486462884029
+   ]
+  },
+  {
+   "action": {
+    "source": 0,
+    "phase": 0.39269908169872414,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "first_drive_rel_diff_neumann": 1.0110710676222328,
+   "kappa_over_KAPPA_before_second": [
+    0.04535570740699768,
+    4.1425228118896484e-06,
+    0.23358413577079773,
+    1.9669532775878906e-06
+   ],
+   "second": {
+    "live": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "frozen": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 1.1887483169247754,
+   "second_drive_rel_diff_frozen": 0.7299507315750666,
+   "second_drive_rel_diff_neumann_per_patch": [
+    1.1174632652987286,
+    1.6672130261512796,
+    1.0895130943144857,
+    1.5562053649563112
+   ]
+  },
+  {
+   "action": {
+    "source": 0,
+    "phase": 2.748893571891069,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     8,
+     7,
+     7,
+     7
+    ]
+   },
+   "first_drive_rel_diff_neumann": 10.36650125192682,
+   "kappa_over_KAPPA_before_second": [
+    0.09429702162742615,
+    0.023701220750808716,
+    0.3217288851737976,
+    0.005771994590759277
+   ],
+   "second": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     8,
+     8,
+     7,
+     7
+    ],
+    "frozen": [
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 11.286595943042698,
+   "second_drive_rel_diff_frozen": 0.7168697526206249,
+   "second_drive_rel_diff_neumann_per_patch": [
+    9.349059120334998,
+    12.198433264549164,
+    12.773554856788687,
+    11.859885869543296
+   ]
+  },
+  {
+   "action": {
+    "source": 0,
+    "phase": 3.9269908169872414,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "neumann": [
+     2,
+     0,
+     0,
+     0
+    ]
+   },
+   "first_drive_rel_diff_neumann": 6.5532552926697685,
+   "kappa_over_KAPPA_before_second": [
+    0.37311798334121704,
+    0.004630416631698608,
+    0.00017684698104858398,
+    0.002921551465988159
+   ],
+   "second": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "frozen": [
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 8.441254346204305,
+   "second_drive_rel_diff_frozen": 0.6056405464959139,
+   "second_drive_rel_diff_neumann_per_patch": [
+    7.041175443791182,
+    12.112114883826777,
+    6.8032201539449675,
+    11.60837460785546
+   ]
+  },
+  {
+   "action": {
+    "source": 1,
+    "phase": 0.0,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     2,
+     0,
+     2,
+     0
+    ]
+   },
+   "first_drive_rel_diff_neumann": 7.225629879238943,
+   "kappa_over_KAPPA_before_second": [
+    0.17512187361717224,
+    3.93986701965332e-05,
+    0.05112236738204956,
+    0.003071397542953491
+   ],
+   "second": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     2,
+     0,
+     2,
+     0
+    ],
+    "frozen": [
+     1,
+     0,
+     1,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 8.523123313530803,
+   "second_drive_rel_diff_frozen": 0.6169762048955882,
+   "second_drive_rel_diff_neumann_per_patch": [
+    7.173423877461274,
+    10.863409400683961,
+    6.926607955774873,
+    12.672694647918783
+   ]
+  },
+  {
+   "action": {
+    "source": 1,
+    "phase": 0.7853981633974483,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     2,
+     0,
+     2,
+     0
+    ]
+   },
+   "first_drive_rel_diff_neumann": 7.116280546164438,
+   "kappa_over_KAPPA_before_second": [
+    0.05743613839149475,
+    0.0320563018321991,
+    0.2344619184732437,
+    0.0009652375592850149
+   ],
+   "second": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     2,
+     0,
+     3,
+     0
+    ],
+    "frozen": [
+     1,
+     0,
+     1,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 9.19110919275455,
+   "second_drive_rel_diff_frozen": 0.5230227979427907,
+   "second_drive_rel_diff_neumann_per_patch": [
+    7.278939186292585,
+    13.344951684672829,
+    8.300919711125708,
+    10.982443233527906
+   ]
+  },
+  {
+   "action": {
+    "source": 1,
+    "phase": 1.9634954084936207,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "neumann": [
+     11,
+     11,
+     10,
+     11
+    ]
+   },
+   "first_drive_rel_diff_neumann": 10.535239526243078,
+   "kappa_over_KAPPA_before_second": [
+    0.02124965190887451,
+    0.7575234174728394,
+    0.15370959043502808,
+    0.04797324538230896
+   ],
+   "second": {
+    "live": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "neumann": [
+     11,
+     11,
+     11,
+     11
+    ],
+    "frozen": [
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "second_drive_rel_diff_neumann": 17.962058094549608,
+   "second_drive_rel_diff_frozen": 0.8916246275450572,
+   "second_drive_rel_diff_neumann_per_patch": [
+    12.275288075709323,
+    31.60396113244795,
+    18.563575140660053,
+    23.220971122583652
+   ]
+  },
+  {
+   "action": {
+    "source": 1,
+    "phase": 2.748893571891069,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "neumann": [
+     6,
+     8,
+     7,
+     7
+    ]
+   },
+   "first_drive_rel_diff_neumann": 10.768294474387782,
+   "kappa_over_KAPPA_before_second": [
+    0.02960270643234253,
+    0.20934924483299255,
+    0.14601707458496094,
+    0.007116705644875765
+   ],
+   "second": {
+    "live": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "neumann": [
+     6,
+     8,
+     8,
+     8
+    ],
+    "frozen": [
+     0,
+     1,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 16.297047199493022,
+   "second_drive_rel_diff_frozen": 1.1327838935505659,
+   "second_drive_rel_diff_neumann_per_patch": [
+    13.673861243188627,
+    19.39533824519186,
+    15.175719724319695,
+    19.272547349986784
+   ]
+  },
+  {
+   "action": {
+    "source": 1,
+    "phase": 5.105088062083414,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     1,
+     1,
+     0,
+     1
+    ],
+    "neumann": [
+     11,
+     11,
+     10,
+     11
+    ]
+   },
+   "first_drive_rel_diff_neumann": 10.838885453451105,
+   "kappa_over_KAPPA_before_second": [
+    0.9311496019363403,
+    0.10168975591659546,
+    0.013545811176300049,
+    0.9260374307632446
+   ],
+   "second": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     12,
+     11,
+     11,
+     11
+    ],
+    "frozen": [
+     1,
+     0,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 24.764529938213265,
+   "second_drive_rel_diff_frozen": 0.5491491676315291,
+   "second_drive_rel_diff_neumann_per_patch": [
+    21.604872753343052,
+    26.2547643385079,
+    19.74569171287794,
+    52.789331275932035
+   ]
+  },
+  {
+   "action": {
+    "source": 2,
+    "phase": 0.0,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "neumann": [
+     2,
+     0,
+     1,
+     0
+    ]
+   },
+   "first_drive_rel_diff_neumann": 7.9445854571453305,
+   "kappa_over_KAPPA_before_second": [
+    0.8619809150695801,
+    1.3738870620727539e-05,
+    0.04362213611602783,
+    0.21824505925178528
+   ],
+   "second": {
+    "live": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "neumann": [
+     1,
+     0,
+     1,
+     1
+    ],
+    "frozen": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 9.667829454207649,
+   "second_drive_rel_diff_frozen": 0.6275891339900074,
+   "second_drive_rel_diff_neumann_per_patch": [
+    7.059121846274633,
+    14.420495058982802,
+    8.417802126564869,
+    16.74131375452991
+   ]
+  },
+  {
+   "action": {
+    "source": 2,
+    "phase": 3.5342917352885173,
+    "amp": 2.0
+   },
+   "first": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     1,
+     0,
+     1,
+     0
+    ]
+   },
+   "first_drive_rel_diff_neumann": 0.7311315308707573,
+   "kappa_over_KAPPA_before_second": [
+    0.29105085134506226,
+    0.004059046506881714,
+    0.21946528553962708,
+    0.01448258850723505
+   ],
+   "second": {
+    "live": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "neumann": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "frozen": [
+     1,
+     0,
+     1,
+     0
+    ]
+   },
+   "second_drive_rel_diff_neumann": 0.9502770169030295,
+   "second_drive_rel_diff_frozen": 0.5149887885222912,
+   "second_drive_rel_diff_neumann_per_patch": [
+    0.7853487664615697,
+    1.2402780035707839,
+    0.9400146579401538,
+    1.2536614814286577
+   ]
+  }
+ ],
+ "n": 12,
+ "first_live_ne_neumann": 11,
+ "second_live_ne_neumann": 11,
+ "second_live_ne_frozen": 5,
+ "drive_rel_diff_median": {
+  "first_neumann": 7.622261422579774,
+  "second_neumann": 10.060744651434515,
+  "second_frozen": 0.6722294433053162
+ }
+}

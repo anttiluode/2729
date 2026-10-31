@@ -113,14 +113,23 @@ class TwoBand:
         A locked pair's two phases advance by 0.14 rad/step in total; a slip adds 2pi."""
         return np.round(self.sum_phase_excess() / (2 * math.pi)).astype(int)
 
-    kappa_override = None          # Gate 0 only: fixed per-patch springs, pairs ignored
+    kappa_override = None          # fixed per-patch springs (Gate 0; round-2 feedback branches)
+    drive_log = None               # if a list: per step, the patch displacements each pair hears
+
+    wall_mode = "local"            # "pooled": every patch gets the mean of the pairs' springs
+                                   # (round-2 control: same total wall, no spatial pattern)
 
     def kappa(self):
         if self.kappa_override is not None:
             return np.asarray(self.kappa_override, float)
         if not self.couple_wall:
             return np.zeros(len(self.patches))
-        return KAPPA * (1 - np.cos(self.D())) / 2
+        k = KAPPA * (1 - np.cos(self.D())) / 2
+        if self.wall_mode == "pooled":
+            k = np.full_like(k, k.mean())
+        elif self.wall_mode == "scaled":           # sensitivity floor: live springs x wall_scale
+            k = k * self.wall_scale
+        return k
 
     def robin(self):
         r = np.zeros((96, 96))
@@ -145,6 +154,8 @@ class TwoBand:
         nxt *= self.ins
         self.prev, self.u = u, nxt
         # pairs hear their patch (cavity value after this step)
+        if self.drive_log is not None:
+            self.drive_log.append([float(self.u[m].mean()) for m in self.masks])
         for k, p in enumerate(self.pairs):
             hear = float(self.u[self.masks[k]].mean()) if self.couple_hear else 0.0
             p.step(external_source=self.kern * (self.g_in * hear) if hear != 0.0 else None)

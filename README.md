@@ -70,6 +70,48 @@ Twelve firing actions from G2 were each applied four times to the same wall, eve
 
 Typical sequences: `[0,0,1,0] → [1,0,0,0] → [1,0,0,0] → [0,0,0,0]` and `[1,1,0,1] → [1,0,1,0] → [0,0,0,0] → [0,0,0,0]`. The same action is routed by what is already stored, as T4 predicted for one pair: D gates firing, and firing moves D. Repeated, an action tends to use up the wall it writes. Twelve sequences are enough to show that the effect exists, not to estimate its rates.
 
+## Round 2 (Astra's review): does feedback through the cavity add anything?
+
+Astra's question: the repeat test shows that something retained changes the next response, but each pair's own D already does that. Does the **wall** contribute: do changed springs reshape the wave, so that other pairs receive something different? And does that buy a capability? Two experiments (`round2.py`), frozen before they ran.
+
+### Isolating the wall
+After the first application of each of G4's 12 actions, the system is forked: same pair states, clocks, cavity field and noise stream. The second application then runs in several branches. Two of the fair attackers were added after the first version exposed a bad control (item 1 below):
+
+| branch for the 2nd application | firing differs from live | patch drive vs live (median relative RMS) |
+|---|---|---|
+| **live**: springs follow D (the 2729 system) | — | — |
+| **pooled**: every patch follows the mean of the four springs | **3 / 12** | 0.57 |
+| **permuted**: written springs frozen, shifted one patch along | **4 / 12** | 0.86 |
+| **frozen**: springs frozen at their written values during the write | 5 / 12 | 0.67 |
+| **sensitivity floor**: live springs × 1.02 or × 0.98 | **0 / 12** | 0.022 |
+| **neumann**: springs held unwritten (κ = 0) | 11 / 12 | 10.1 (see 1) |
+
+On the first application, from a fresh wall, pooled differs from live in 4/12.
+
+1. **Holding the wall unwritten is not a fair control.** A perfectly Neumann cavity has an undamped zero mode. The uniform offset a write deposits then never drains, and the pairs slip continuously: up to 45 slips per write, counting all four pairs, where the live wall has 0 to 3. In the live system, even tiny written springs remove that mode. So "the walls matter" is true, but here it is mostly a global effect, not memory. The first version of this round used that branch as its baseline (`results/r2_feedback_v1.json`).
+2. **The spatial pattern in the wall is real but minor.** Removing which patch holds which spring changes the drive every pair hears by 57–86 %, and changes the next write's firing in 3–4 of 12 cases. A ±2 % perturbation changes nothing. So in roughly a quarter of cases the memory acts through the cavity; in the rest, each pair's own D decides. Springs changing *during* a write matter about as much (5/12).
+
+### One small job: A then B vs B then A
+A fires patch 0 alone and B fires patch 2 alone, both from a fresh wall. Each trial runs A then B, or B then A, with a gap between the two. After a full ringdown, the clocks are realigned and a fixed probe is applied. Pair phase noise is on, with an independent seed per trial. **full** (each spring follows its own pair) is compared with **pooled** (every spring follows the mean: same total wall, same zero-mode drain, no spatial pattern).
+
+Training uses gaps 1500 and 6080 at noise 0.003, 5 trials per order and gap. Held out: gap 3000 (unseen timing) and noise 0.01 (unseen noise). The decoder is nearest centroid; chance is 50 %. Any commutative memory, a sum of per-input effects, is at chance by construction.
+
+| read-out | full: train LOO | full: held-out gap | full: held-out noise | pooled: train LOO | pooled: held-out gap | pooled: held-out noise |
+|---|---|---|---|---|---|---|
+| stored D before the probe | 16/20 | 5/10 | 5/10 | 17/20 | 5/10 | 4/10 |
+| 3-source echo before the probe | 13/20 | 6/10 | 5/10 | 15/20 | 6/10 | 6/10 |
+| the probe's firing pattern | 7/20 | 6/10 | 2/10 | 15/20 | 5/10 | 4/10 |
+
+**Verdict: it fails the job.** Within the training conditions, the stored D separates the two orders (16–17 of 20). But nothing generalizes to an unseen gap or unseen noise, and the full system never beats the pooled one. Under noise 0.003, the probe response is scattered across many firing patterns. Whatever order memory exists lives in the pairs and is fragile, and the wall's spatial pattern adds nothing measurable to it. A small recurrent network given the two inputs in order solves this trivially, so no comparison was needed to see that this system does not compete.
+
+## Idealized instruments (simulation conveniences, not device physics)
+
+Keeping the parent solvers unchanged does not make the new couplings established physics. Three aids here have no physical counterpart yet:
+
+- **The unforced twin pair.** The wall transducer, and every D reported here, compares each pair with a noise-free unforced copy on the same clock. A device would need a realizable phase reference: a shared reference oscillator, or a transducer driven by something local to the pair.
+- **The cloned background.** An echo is the pinged trace minus an exact un-pinged clone of the whole system. A device would need a measured background, for example a ping-free listening window just before the ping.
+- **κ depends on cos D.** D and −D give the same spring, so the echo reads |D|, not signed phase. The G3 correlation of 0.95 is between estimated and true spring strengths, over ten selected written walls. It is not recovery of an arbitrary phase.
+
 ## Corrections on the way (kept, because they are part of the result)
 
 1. **"Retained D" needs a twin.** In a locked pair θ_A − θ_X rotates at the locked difference frequency: an idle pair's raw D moved 3.1 rad in 3000 steps. Every D here is measured against an unforced, noise-free twin stepped on the same clock.
@@ -93,8 +135,13 @@ Typical sequences: `[0,0,1,0] → [1,0,0,0] → [1,0,0,0] → [0,0,0,0]` and `[1
 - Patch 3 cannot be fired alone by any single action tested.
 - The first G4 (no clock matching) measured mostly the clock: its own control (a never-written wall at the later time) reproduced the first outcome in only 8/36.
 
+**Round 2**
+- The wall's spatial pattern changes the next write in 3–4 of 12 cases (floor 0/12). It is real and minor; the pairs' local memory does most of the routing.
+- A held-unwritten (Neumann) wall is not a valid control: its undamped zero mode drives continuous slipping.
+- Order task (A→B vs B→A, then probe): 16–17/20 within the training conditions, chance on unseen timing and noise, and full ≤ pooled. The cavity loop does not earn a temporal-computing claim.
+
 **Not done**
-- Noise (every run here has phase noise 0). Relay between pairs. Moving or bonded chains. Larger K, other cavity shapes, or a learned write policy. A cycle-averaging transducer (κ from the 195-step mean of D), which should remove the breathing. Erasing (driving D back toward 0).
+- Noise in Gates 0–G4 (only round 2's order task has pair noise). Relay between pairs. Moving or bonded chains. Larger K, other cavity shapes, or a learned write policy. A cycle-averaging transducer (κ from the 195-step mean of D), which should remove the breathing. Erasing (driving D back toward 0).
 
 ## Run
 
@@ -107,6 +154,7 @@ python gates.py write              # G2, 144 actions (~30 min on 2 cores)
 python gates.py decode             # G3
 python gates.py repeat2            # G4 on matched clocks (~15 min)
 python checks.py ringdown readwrit wobble clock   # receipts for the mechanism claims (~30 min)
+python round2.py feedback floor order             # round 2 (~1.5 h)
 python make_figures.py
 ```
 

@@ -1,0 +1,9 @@
+order full  read-out probe: train LOO (7, 20), held-out gap 3000 (6, 10), held-out noise 0.01 (2, 10)
+order full  read-out D    : train LOO (16, 20), held-out gap 3000 (5, 10), held-out noise 0.01 (5, 10)
+order full  read-out echo : train LOO (13, 20), held-out gap 3000 (6, 10), held-out noise 0.01 (5, 10)
+   probe patterns AB ['[0, 0, 0, 0]', '[0, 0, 1, 0]', '[1, 1, 0, 0]', '[2, 0, 1, 0]', '[3, 0, 1, 0]'] | BA ['[0, 0, 0, 0]', '[0, 0, 0, 1]', '[0, 0, 0, 3]', '[0, 0, 1, 0]', '[0, 1, 0, 0]', '[1, 0, 0, 0]', '[1, 0, 1, 0]', '[1, 0, 1, 1]']
+order pooled read-out probe: train LOO (15, 20), held-out gap 3000 (5, 10), held-out noise 0.01 (4, 10)
+order pooled read-out D    : train LOO (17, 20), held-out gap 3000 (5, 10), held-out noise 0.01 (4, 10)
+order pooled read-out echo : train LOO (15, 20), held-out gap 3000 (6, 10), held-out noise 0.01 (6, 10)
+   probe patterns AB ['[0, 0, 0, 0]', '[0, 0, 1, 0]', '[0, 1, 1, 0]', '[1, 0, 0, 0]', '[1, 0, 1, 0]', '[2, 0, 0, 0]'] | BA ['[0, 0, 0, 0]', '[0, 0, 1, 0]', '[0, 0, 2, 0]', '[0, 1, 0, 0]', '[1, 0, 0, 0]', '[1, 0, 1, 1]', '[2, 0, 1, 0]']
+done

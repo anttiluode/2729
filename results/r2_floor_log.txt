@@ -1,0 +1,1 @@
+floor: firing differs from live with springs x1.02 in 0/12, x0.98 in 0/12, either 0/12; median drive diff {'scaled1.02': 0.022462292142906355, 'scaled0.98': 0.022983198885172}
