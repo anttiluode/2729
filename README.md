@@ -89,7 +89,9 @@ After the first application of each of G4's 12 actions, the system is forked: sa
 On the first application, from a fresh wall, pooled differs from live in 4/12.
 
 1. **Holding the wall unwritten is not a fair control.** A perfectly Neumann cavity has an undamped zero mode. The uniform offset a write deposits then never drains, and the pairs slip continuously: up to 45 slips per write, counting all four pairs, where the live wall has 0 to 3. In the live system, even tiny written springs remove that mode. So "the walls matter" is true, but here it is mostly a global effect, not memory. The first version of this round used that branch as its baseline (`results/r2_feedback_v1.json`).
-2. **The spatial pattern in the wall is real but minor.** Removing which patch holds which spring changes the drive every pair hears by 57–86 %, and changes the next write's firing in 3–4 of 12 cases. A ±2 % perturbation changes nothing. So in roughly a quarter of cases the memory acts through the cavity; in the rest, each pair's own D decides. Springs changing *during* a write matter about as much (5/12).
+2. **The wall's spatial pattern changes what the pairs receive.** Removing which patch holds which spring changes the drive every pair hears by 57–86 % (a ±2 % perturbation: 2 %). That waveform change crosses a firing threshold in 3–4 of the 12 actions (±2 %: 0/12). Springs changing *during* a write matter about as much (5/12).
+3. **Placement alone, cleanly (added after Astra's review).** "Permuted" both moves *and* freezes the springs, so it should be compared with "frozen", not with "live". The two differ only in where the springs sit, and their firing differs in **4/12** (`r2_feedback.json`, same runs, no new simulation).
+4. **What these counts are not.** 3–4 of 12 is the number of selected actions whose firing *count* changed. It is not the cavity's share of the computation: a large analog change can stay below threshold. "Pooled" still feeds back through the cavity, through the mean spring. It removes the spatial *arrangement*, not all memory acting through the wall.
 
 ### One small job: A then B vs B then A
 A fires patch 0 alone and B fires patch 2 alone, both from a fresh wall. Each trial runs A then B, or B then A, with a gap between the two. After a full ringdown, the clocks are realigned and a fixed probe is applied. Pair phase noise is on, with an independent seed per trial. **full** (each spring follows its own pair) is compared with **pooled** (every spring follows the mean: same total wall, same zero-mode drain, no spatial pattern).
@@ -102,7 +104,7 @@ Training uses gaps 1500 and 6080 at noise 0.003, 5 trials per order and gap. Hel
 | 3-source echo before the probe | 13/20 | 6/10 | 5/10 | 15/20 | 6/10 | 6/10 |
 | the probe's firing pattern | 7/20 | 6/10 | 2/10 | 15/20 | 5/10 | 4/10 |
 
-**Verdict: it fails the job.** Within the training conditions, the stored D separates the two orders (16–17 of 20). But nothing generalizes to an unseen gap or unseen noise, and the full system never beats the pooled one. Under noise 0.003, the probe response is scattered across many firing patterns. Whatever order memory exists lives in the pairs and is fragile, and the wall's spatial pattern adds nothing measurable to it. A small recurrent network given the two inputs in order solves this trivially, so no comparison was needed to see that this system does not compete.
+**Verdict: it fails the job.** Within the training conditions, the stored D separates the two orders (16–17 of 20). But nothing generalizes to an unseen gap or unseen noise, and the full system never beats the pooled one. Under noise 0.003, the probe response is scattered across many firing patterns. Individual spatial spring patterns gave no demonstrated advantage over shared modulation. This is ten held-out trials per condition with one simple decoder: enough to withhold a robustness claim, not enough to show that order information is absent for every decoder or operating regime. A small recurrent network given the two inputs in order solves this trivially, so no comparison was needed to see that this system does not compete.
 
 ## Idealized instruments (simulation conveniences, not device physics)
 
@@ -136,9 +138,11 @@ Keeping the parent solvers unchanged does not make the new couplings established
 - The first G4 (no clock matching) measured mostly the clock: its own control (a never-written wall at the later time) reproduced the first outcome in only 8/36.
 
 **Round 2**
-- The wall's spatial pattern changes the next write in 3–4 of 12 cases (floor 0/12). It is real and minor; the pairs' local memory does most of the routing.
+- A causal loop is measured: earlier stimulation → changed boundary → changed waveform at the pairs (57–86 %) → changed firing in 3–4/12 actions (floor 0/12). Placement alone, both arms frozen: 4/12.
 - A held-unwritten (Neumann) wall is not a valid control: its undamped zero mode drives continuous slipping.
-- Order task (A→B vs B→A, then probe): 16–17/20 within the training conditions, chance on unseen timing and noise, and full ≤ pooled. The cavity loop does not earn a temporal-computing claim.
+- Order task (A→B vs B→A, then probe): 16–17/20 within the training conditions, chance on unseen timing and noise, and full ≤ pooled. The loop is not shown to *improve a task*.
+
+**Status (1 Nov, with Astra):** kept as a documented mechanism study and a negative computing benchmark. 2729 supports (1) a system retains consequences of its past and (2) those consequences change later wave propagation. It does not support (3), that the change improves a task. For sensing and calibration, WallMemoryLaw is the more direct line. For a controllable history-dependent detector, the isolated pair is. Return to the combination only for a task that needs spatial feedback.
 
 **Not done**
 - Noise in Gates 0–G4 (only round 2's order task has pair noise). Relay between pairs. Moving or bonded chains. Larger K, other cavity shapes, or a learned write policy. A cycle-averaging transducer (κ from the 195-step mean of D), which should remove the breathing. Erasing (driving D back toward 0).
